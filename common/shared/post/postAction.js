@@ -1,8 +1,6 @@
 const fetch = require('isomorphic-fetch');
 const GOBBLE_API_URL = require('../../../env/client').GOBBLE_API_URL;
 
-const GET_POSTS_BY_DATE = 'GET_POSTS_BY_DATE';
-const GET_POSTS_BY_FRIENDS = 'GET_POSTS_BY_FRIENDS';
 
 export function getPostsByDate(date) {
   let date2 = date;
