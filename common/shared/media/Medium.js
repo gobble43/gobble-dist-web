@@ -30,6 +30,7 @@ class Medium extends Component {
   }
   renderContent() {
     const url = this.validUrl();
+    if (!url) return null;
     const path = `${GOBBLE_MEDIA_URL}/images/${url}`;
     const isImage = url.match(/jpg$|jpeg$|png$/) !== null;
     if (isImage) {

@@ -10,7 +10,7 @@ class Media extends Component {
   render() {
     return (
       <div className="media">
-        {this.props.media ? this.props.media.map(medium => <Medium key={medium.id} {...medium} />) : null}
+        {this.props.media ? this.props.media.map((medium, index) => <Medium key={index} {...medium} />) : null}
       </div>
     );
   }
