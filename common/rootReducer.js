@@ -9,6 +9,7 @@ import addPostReducer from './shared/add-post/addPostReducer';
 import commentReducer from './shared/comment/commentsReducer';
 import postsReducer from './shared/post/postsReducer';
 import recReducer from './user-app/user-rec/recReducer';
+import mediaReducer from './shared/media/mediaReducer';
 
 const rootReducer = combineReducers({
   layout: mainLayoutReducer,
@@ -19,7 +20,8 @@ const rootReducer = combineReducers({
   routing: routerReducer,
   comment: commentReducer,
   post: postsReducer,
-  rec: recReducer
+  rec: recReducer,
+  media: mediaReducer
 });
 
 export default rootReducer;

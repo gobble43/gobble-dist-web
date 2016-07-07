@@ -4,6 +4,7 @@ import ReviewProfile from './ReviewProfile';
 import Content from './Content';
 import Comments from '../comment/CommentsContainer';
 import Media from '../media/MediaContainer';
+import Rating from './Rating';
 
 const Review = props => (
   <div className="review">
@@ -13,6 +14,7 @@ const Review = props => (
       last_name={props.last_name}
       photo_url={props.photo_url}
     />
+    <Rating rating={props.rating} />
     <Content comment={props.comment} />
     <Media postId={props.postId} />
     <Comments postId={props.postId} />
