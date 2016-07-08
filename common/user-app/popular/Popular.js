@@ -2,10 +2,12 @@ import React from 'react';
 
 import Posts from '../../shared/post/PostContainer';
 
-const Popular = () => (
+const Popular = () => {
+  console.log('here')
+  return(
   <div className="popular-view">
     <Posts type="friends" />
-  </div>
-);
+  </div>);
+};
 
 export default Popular;

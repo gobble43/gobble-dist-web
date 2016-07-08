@@ -1,8 +1,9 @@
 import React, { PropTypes } from 'react';
+import { GOBBLE_MEDIA_URL } from '../../../env/client';
 
 const ProductName = props => (
   <div className="product-name">
-    <a href={`/food/${props.upc}`}>{props.name}</a>
+    <a href={`${GOBBLE_MEDIA_URL}/food/${props.upc}`}>{props.name}</a>
   </div>
 );
 

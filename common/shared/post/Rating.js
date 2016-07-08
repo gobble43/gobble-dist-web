@@ -12,7 +12,7 @@ class Rating extends Component {
   renderStars() {
     const stars = [];
     for (let i = 0; i < 5; i++) {
-      stars.push(<Star filled={i < this.props.stars} />);
+      stars.push(<Star filled={i < this.props.rating} />);
     }
     return stars;
   }
@@ -27,7 +27,7 @@ class Rating extends Component {
 }
 
 Rating.propTypes = {
-  stars: PropTypes.number.isRequired
+  rating: PropTypes.number.isRequired
 };
 
 export default Rating;
