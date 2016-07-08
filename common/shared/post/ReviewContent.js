@@ -6,7 +6,7 @@ import ProductLink from './ProductLink';
 import PostContent from './PostContent';
 import Media from '../media/MediaContainer';
 
-const ReviewProfile = props => (
+const ReviewContent = props => (
   <div className="review-profile">
     <div className="review-left">
       <SmallPhoto photo_url={props.photo_url} />
@@ -20,15 +20,15 @@ const ReviewProfile = props => (
   </div>
 );
 
-ReviewProfile.propTypes = {
+ReviewContent.propTypes = {
   facebook_id: PropTypes.number.isRequired,
   first_name: PropTypes.string,
   last_name: PropTypes.string,
   photo_url: PropTypes.string,
   upc: PropTypes.number,
-  name: PropTypes.name,
+  name: PropTypes.string,
   comment: PropTypes.string,
   rating: PropTypes.rating
 };
 
-export default ReviewProfile;
+export default ReviewContent;

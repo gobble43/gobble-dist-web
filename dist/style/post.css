@@ -35,11 +35,49 @@
   border-bottom: 1px solid rgb(225, 225, 225); 
 }*/
 
+.add-comment-textarea {
+  resize: none;
+  border: 1px solid #dddfe2;
+}
+.add-comment-input {
+  background-color: red;
+  box-sizing: border-box;
+}
+.add-comment-textarea {
+  display: inline-block;
+  width: 70%;
+  height: 100%;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+.add-comment-photo {
+  padding: 10px;
+  width: 12.5%;
+  box-sizing: border-box;
+  display: inline-block;
+}
+.add-comment-button {
+  width: 15%;
+  padding-left: 5px;
+  box-sizing: border-box;
+}
+
+.comments-username {
+  padding-right: 7px;
+  float: left;
+}
 .review-profile {
   margin-top: 0;
   display: block;
 }
-
+.comment-content {
+  word-wrap: break-word;
+  max-width: 100%
+}
+.comment-username-row {
+  padding-right: 10px;
+  box-sizing: border-box;
+}
 .username .username-link {
   font-weight: bold;
   color: black;
@@ -74,16 +112,36 @@
   display: inline-block;
   vertical-align: top;
   margin-top: 15px;
-  width: 80%;
+  width: 82.5%;
+  box-sizing: border-box;
 }
 
 .review-left {
-  margin-top: 15px;
-  margin-left: 15px;
-  margin-right: 10px;
+  padding-top: 15px;
+  padding-left: 15px;
+  padding-right: 10px;
   display: inline-block;
-  width: 15%
+  width: 17.5%; 
+  box-sizing: border-box;
+}
 
+.comments {
+  background-color: #e9ebee;
+}
+.comment-left {
+  padding-top: 10px;
+  padding-left: 10px;
+  width: 12.5%;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.comment-right {
+  padding-top: 10px;
+  vertical-align: top;
+  width: 87.5%;
+  display: inline-block;
+  box-sizing: border-box;
 }
 
 .small-photo-img {
@@ -97,4 +155,6 @@
 
 .add-comment, .add-comment-input {
   width: 100%;
+  box-sizing: border-box;
+
 }

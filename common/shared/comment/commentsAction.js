@@ -14,7 +14,8 @@ export function getComments(parentId) {
   };
 }
 
-export function pushComment(userId, parentId, comment, firstName, lastName) {
+export function pushComment(userId, parentId, comment, firstName, lastName, photoUrl) {
+  console.log(arguments);
   const commentObj = {
     User_facebook_id: userId,
     parentId,
@@ -35,6 +36,8 @@ export function pushComment(userId, parentId, comment, firstName, lastName) {
     commentObj.facebook_id = userId;
     commentObj.first_name = firstName;
     commentObj.last_name = lastName;
+    commentObj.photo_url = photoUrl;
+    commentObj.Post_created_at = new Date();
 
     dispatch({ type: 'PUSH_COMMENT', comment: commentObj });
   };

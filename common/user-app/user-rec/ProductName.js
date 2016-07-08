@@ -9,7 +9,7 @@ const ProductName = props => (
 
 ProductName.propTypes = {
   upc: PropTypes.number,
-  name: PropTypes.name
+  name: PropTypes.string
 };
 
 export default ProductName;
