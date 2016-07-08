@@ -5,7 +5,7 @@ export function getRecs(facebookId) {
   return dispatch => {
     fetch(`${GOBBLE_API_URL}/rec?facebookId=${facebookId}`)
       .then(res => res.json())
-      .then(res => dispatch({ type: 'GET_RECS', recs: res }))
+      .then(recs => dispatch({ type: 'GET_RECS', recs }))
       .catch(err => console.log(err));
-  }
+  };
 }

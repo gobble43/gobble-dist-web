@@ -1,7 +1,7 @@
 .add-post {
   text-align: center;
   margin: 0 auto;
-  width: 500px;
+  width: 40%;
   background-color: white;
   border: 1px solid rgb(225, 225, 225);
   border-top-right-radius: 15px;
@@ -10,6 +10,10 @@
 
 .add-post-view {
   margin: 20px 0;
+}
+
+.recommendation {
+  
 }
 
 /* Post Type Bar */

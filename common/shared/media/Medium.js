@@ -16,7 +16,7 @@ class Medium extends Component {
   renderImage(path) {
     return (
       <a href={path}>
-        <img src={path} style={{ maxWidth: '100px' }} alt="content" />
+        <img src={path} style={{ maxHeight: '100px', maxWidth: '100%' }} alt="content" />
       </a>
     );
   }
@@ -45,7 +45,7 @@ class Medium extends Component {
       </div>
     );
   }
-};
+}
 
 Medium.propTypes = {
   url: PropTypes.string,

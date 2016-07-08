@@ -4,7 +4,7 @@ import Recommendations from './Recommendations';
 import { getRecs } from './recommendationAction';
 
 const mapStateToProps = state => ({
-  recs: state.recs
+  recs: state.rec.recs,
   facebookId: state.post.facebookId
 });
 

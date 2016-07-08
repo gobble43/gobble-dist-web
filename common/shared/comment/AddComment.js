@@ -27,8 +27,8 @@ class AddComment extends Component {
       <div className="add-comment">
         <div className="add-comment-input">
           <input onChange={this.handleTextChange} value={this.state.text} />
+          <button onClick={this.handleSubmit} className="pure-button">Post</button>
         </div>
-        <button onClick={this.handleSubmit} className="pure-button">Post</button>
       </div>
     );
   }

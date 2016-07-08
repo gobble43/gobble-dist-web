@@ -10,15 +10,15 @@ class Recommendations extends Component {
   render() {
     return (
       <div className="recs">
-        {this.props.recs ? this.props.recs.map(rec => <Recommendation {...rec} />) : null}
+        <p>You may like the following items:</p>
+        {this.props.recs ? this.props.recs.map((rec, index) => <Recommendation key={index} {...rec} />) : null}
       </div>
 
     );
   }
-
 }
 
-Recommendations.propTypes = {
+Recommendation.propTypes = {
   facebookId: PropTypes.number,
   recs: PropTypes.array,
   getRecs: PropTypes.func

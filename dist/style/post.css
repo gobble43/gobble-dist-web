@@ -1,0 +1,100 @@
+.recs, .posts {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  width: 40%;
+}
+.recs {
+  background-color: white;
+  border: 1px solid rgb(225, 225, 225);
+}
+.review, .wish {
+  margin-top: 15px !important;
+  box-sizing: content-box;
+  border: 1px solid rgb(225, 225, 225);
+  background-color: white;
+}
+
+.medium {
+  display: inline-block;
+  margin-right: 7px;
+}
+
+.media {
+  display: block;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.posts {
+  text-align: left;
+}
+
+/*.review, .wish {
+  display: block;
+  border-bottom: 1px solid rgb(225, 225, 225); 
+}*/
+
+.review-profile {
+  margin-top: 0;
+  display: block;
+}
+
+.username .username-link {
+  font-weight: bold;
+  color: black;
+}
+
+.username .username-link:hover {
+  color: orange;
+  text-decoration: underline;
+}
+
+.username {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/*.post-content {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 80%;
+}*/
+.review {
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  position: relative;
+  vertical-align: top;
+}
+.review-right {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 15px;
+  width: 80%;
+}
+
+.review-left {
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 10px;
+  display: inline-block;
+  width: 15%
+
+}
+
+.small-photo-img {
+  border-radius: 10px;
+}
+
+.review .review-profile .username {
+  display: inline-block;
+
+}
+
+.add-comment, .add-comment-input {
+  width: 100%;
+}

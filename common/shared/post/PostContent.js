@@ -4,7 +4,7 @@ import Rating from './Rating';
 
 const PostContent = props => (
   <div className="post-content">
-    <Rating rating={5} />
+    <Rating rating={props.rating} />
     <div className="post-comment">{props.comment}</div>
   </div>
 
