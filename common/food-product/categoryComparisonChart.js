@@ -3,7 +3,7 @@ const categoryComparisonChart = {};
 
 categoryComparisonChart.create = (el, data) => {
   const margin = { top: 50, right: 50, bottom: 30, left: 50 };
-  const width = 500 - margin.left - margin.right;
+  const width = 700 - margin.left - margin.right;
   const height = 300 - margin.top - margin.bottom;
 
   const x = d3.scaleBand()
@@ -70,7 +70,7 @@ categoryComparisonChart.create = (el, data) => {
   data.sort((a, b) => b.total - a.total);
 
   x.domain(data.map((d) => d.nutrient));
-  y.domain(d3.extent(data, (d) => d.total - 1)).nice();
+  y.domain(d3.extent(data, (d) => d.total)).nice();
 
   svg.append('g')
       .attr('class', 'x axis')

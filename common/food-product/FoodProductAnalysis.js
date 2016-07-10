@@ -17,7 +17,8 @@ class FoodProductAnalysis extends Component {
       selectedProduct, getRandomRecommendations, recommendationsStorage, addedWish, addToWish } = this.props;
     return (
       <div>
-        <div>Compare with the category:{' '}
+        {!categoryComparison ? null :
+        (<div>Compare with the category:{' '}
           <select
             style={{ marginBottom: 20 }}
             defaultValue={
@@ -35,8 +36,7 @@ class FoodProductAnalysis extends Component {
               />)
           )}
           </select>
-          {!categoryComparison ? null :
-          (<AnalysisEntry
+          <AnalysisEntry
             facebookId={facebookId}
             key={categoryComparison}
             basicInfo={productAnalysis.basicInfo}
@@ -48,8 +48,8 @@ class FoodProductAnalysis extends Component {
             recommendationsStorage={recommendationsStorage}
             addedWish={addedWish}
             addToWish={addToWish}
-          />)}
-        </div>
+          />
+        </div>)}
       </div>
     );
   }
@@ -61,7 +61,6 @@ FoodProductAnalysis.propTypes = {
   getCategoryComparison: PropTypes.func.isRequired,
   categoryComparison: PropTypes.string.isRequired,
   showProductDetails: PropTypes.func.isRequired,
-  selectedProduct: PropTypes.number.isRequired,
   getRandomRecommendations: PropTypes.func.isRequired,
   recommendationsStorage: PropTypes.object.isRequired,
   addedWish: PropTypes.string.isRequired,

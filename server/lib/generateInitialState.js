@@ -27,7 +27,7 @@ const generateInitialState = (req, res, isProfile, isUserApp, callback) => {
       upc: !!req.params.upc ? req.params.upc : '',
       productAnalysis: {},
       categoryComparison: '',
-      selectedProduct: 0,
+      selectedProduct: '',
       recommendationsStorage: {},
       facebookId: '',
       reviews: [],

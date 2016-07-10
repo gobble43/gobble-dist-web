@@ -15,20 +15,19 @@ class AnalysisEntry extends Component {
           if (recommendations) {
             const chosenRecommendation =
             recommendations[Math.floor(Math.random() * recommendations.length)];
-            if (!recs[chosenRecommendation.UPC]) {
+            if (!recs[chosenRecommendation.upc]) {
               chosenRecommendation.quality = [nutrients];
               chosenRecommendation.nutrient = [nutrient];
-              recs[chosenRecommendation.UPC] = chosenRecommendation;
+              recs[chosenRecommendation.upc] = chosenRecommendation;
             } else {
-              recs[chosenRecommendation.UPC].quality.push(nutrients);
-              recs[chosenRecommendation.UPC].nutrient.push(nutrient);
+              recs[chosenRecommendation.upc].quality.push(nutrients);
+              recs[chosenRecommendation.upc].nutrient.push(nutrient);
             }
           }
         });
       }
       return true;
     });
-    console.log(data, category)
     getRandomRecommendations(recs, category);
   }
 
@@ -54,7 +53,10 @@ class AnalysisEntry extends Component {
         });
       });
     }
-    categoryComparisonChart.create(chart, chartData);
+    console.log("CHART", chartData);
+    if (chartData.length > 0) {
+      categoryComparisonChart.create(chart, chartData);
+    }
   }
 
   render() {
@@ -113,7 +115,6 @@ AnalysisEntry.propTypes = {
   category: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired,
   showProductDetails: PropTypes.func.isRequired,
-  selectedProduct: PropTypes.number.isRequired,
   getRandomRecommendations: PropTypes.func.isRequired,
   recommendationsStorage: PropTypes.object.isRequired,
   basicInfo: PropTypes.object.isRequired,

@@ -5,7 +5,7 @@ const foodProductInitialState = {
   upc: '',
   productAnalysis: {},
   categoryComparison: '',
-  selectedProduct: 0,
+  selectedProduct: '',
   recommendationsStorage: {},
   facebookId: '',
   reviews: [],
@@ -29,7 +29,7 @@ const foodProductReducer = (state = foodProductInitialState, action) => {
     case GET_CATEGORY_COMPARISON:
       return Object.assign({}, state, {
         categoryComparison: action.categoryComparison,
-        selectedProduct: 0,
+        selectedProduct: '',
       });
     case SHOW_PRODUCT_DETAILS:
       return Object.assign({}, state, {

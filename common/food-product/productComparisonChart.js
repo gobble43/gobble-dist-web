@@ -5,7 +5,7 @@ productComparisonChart.create = (el, data) => {
   const nutrientLevel = Object.keys(data[0])[1];
   const comparedLevel = Object.keys(data[0])[2];
   const margin = { top: 50, right: 50, bottom: 30, left: 50 };
-  const width = 500 - margin.left - margin.right;
+  const width = 700 - margin.left - margin.right;
   const height = 300 - margin.top - margin.bottom;
 
   const x = d3.scaleBand()

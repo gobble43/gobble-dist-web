@@ -18,6 +18,7 @@ class FoodProduct extends Component {
     .then((res) => res.json())
     .catch((err) => console.log('Analysis and recommendation is not ready: ', err))
     .then((data) => {
+      console.log('RECOMMENDATION', data);
       this.props.getProductAnalysis(data);
       this.props.getCategoryComparison(
         Object.keys(data)[0] !== 'basicInfo' ?
@@ -34,7 +35,7 @@ class FoodProduct extends Component {
     .catch((err) => console.log(err))
     .then((data) => {
       if (data) {
-        this.props.getReviews(data);
+        this.props.getReviews(data.slice(0, 6));
       }
     })
     .catch((err) => console.log(err));
@@ -105,7 +106,6 @@ FoodProduct.propTypes = {
   getCategoryComparison: PropTypes.func.isRequired,
   categoryComparison: PropTypes.string.isRequired,
   showProductDetails: PropTypes.func.isRequired,
-  selectedProduct: PropTypes.number.isRequired,
   getRandomRecommendations: PropTypes.func.isRequired,
   recommendationsStorage: PropTypes.object.isRequired,
   addedWish: PropTypes.string.isRequired,
