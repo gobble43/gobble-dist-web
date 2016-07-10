@@ -235,3 +235,7 @@
   box-sizing: border-box;
   border-top: 1px solid rgb(220, 220, 220);
 } 
+
+.wish-comment {
+  margin-top: 15px;
+}
